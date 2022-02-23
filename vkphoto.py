@@ -1,4 +1,4 @@
-import vk, vk_api, time,colorama
+import vk_api, time, colorama
 from colorama import Fore, Back, Style
 from vk_api import VkUpload
 colorama.init()
@@ -16,8 +16,8 @@ print(Fore.CYAN + banner)
 token = input('Введите токен: ')
 album = input('Введите id альбома: ')
 session = vk.Session(access_token=token)
-api = vk.API(session)
-vks = vk_session
+session = vk.Session(access_token=token)
+apivk = vk.API(session)
 upload = VkUpload(vk_session)
 
 while True:
