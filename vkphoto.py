@@ -15,9 +15,9 @@ print(Fore.CYAN + banner)
 
 token = input('Введите токен: ')
 album = input('Введите id альбома: ')
-session = vk.Session(access_token=token)
-session = vk.Session(access_token=token)
-apivk = vk.API(session)
+session = vk_session(access_token=token)
+session = vk_session(access_token=token)
+apivk = vk_api(session)
 upload = VkUpload(vk_session)
 
 while True:
