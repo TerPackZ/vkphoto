@@ -23,13 +23,16 @@ opicanya = [
 ]
 print(Fore.CYAN + priva[0])
 print(Fore.CYAN + opicanya[0])
-vibor = input('--> ')
-if vibor == "yes":
-    os.system("termux-open-url 'https://t.me/TerPackZ'")
-elif vibor == "no":
-	login1 = input('Введите логин')
-	password1 = input('Введите пароль:')
-	album = input('Введите id альбома:')
+choose = input('--> ')
+if choose == "yes":
+	os.system("termux-open-url 'https://t.me/TerPackZ'")
+	login1 = input('Введите логин: ')
+	password1 = input('Введите пароль: ')
+	album = input('Введите id альбома: ')
+elif choose == "no":
+	login1 = input('Введите логин: ')
+	password1 = input('Введите пароль: ')
+	album = input('Введите id альбома: ')
 vk_session = vk_api.VkApi(login=login1, password=password1, app_id='2685278')
 vk_session.auth(token_only=True)
 vks = vk_session
