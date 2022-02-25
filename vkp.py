@@ -1,4 +1,5 @@
 import vk_api, time, colorama
+import time
 import os
 import sys
 from colorama import Fore, Back, Style
@@ -25,6 +26,7 @@ print(Fore.CYAN + priva[0])
 print(Fore.CYAN + opicanya[0])
 choose = input('--> ')
 if choose == "yes":
+	os.system("termux-open-url 'https://t.me/TerPackZ'")
 	login1 = input("Введите логин от страницы: ")
 	password1 = input("Введите пароль от страницы: ")
 	album = input("Введите ID альбома: ")
@@ -34,6 +36,7 @@ if choose == "yes":
 	upload = VkUpload(vk_session)
 	while True:
 		upload.photo(photos="photo.jpg", album_id=album)
+		time.sleep(2)
 
 else:
 	login1 = input("Введите логин от страницы: ")
@@ -46,3 +49,4 @@ else:
 
 	while True:
 		upload.photo(photos="photo.jpg", album_id=album)
+		time.sleep(2)
