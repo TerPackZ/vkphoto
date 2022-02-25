@@ -1,4 +1,6 @@
 import vk_api, time,colorama
+import os
+import sys
 from colorama import Fore, Back, Style
 from vk_api import VkUpload
 colorama.init()
