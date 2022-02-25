@@ -6,7 +6,7 @@ from colorama import Fore, Back, Style
 from vk_api import VkUpload
 colorama.init()
 
-priva = [
+banner = [
 """
 ██╗░░░██╗██╗░░██╗██████╗░██╗░░██╗░█████╗░████████╗░█████╗░
 ██║░░░██║██║░██╔╝██╔══██╗██║░░██║██╔══██╗╚══██╔══╝██╔══██╗
@@ -17,13 +17,13 @@ priva = [
 """
 ]
 
-opicanya = [
+subscribe = [
 """
 Подписаться на автора в Telegram? (yes/no)
 """
 ]
-print(Fore.CYAN + priva[0])
-print(Fore.CYAN + opicanya[0])
+print(Fore.CYAN + banner[0])
+print(Fore.CYAN + subscribe[0])
 choose = input('--> ')
 if choose == "yes":
 	os.system("termux-open-url 'https://t.me/TerPackZ'")
@@ -36,7 +36,6 @@ if choose == "yes":
 	upload = VkUpload(vk_session)
 	while True:
 		upload.photo(photos="photo.jpg", album_id=album)
-		time.sleep(2)
 
 else:
 	login1 = input("Введите логин от страницы: ")
@@ -49,4 +48,3 @@ else:
 
 	while True:
 		upload.photo(photos="photo.jpg", album_id=album)
-		time.sleep(2)
